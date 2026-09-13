@@ -1,0 +1,27 @@
+{
+  "registros": [],
+  "solicitacoes": [
+    {
+      "id": 1,
+      "nome": "aaaaaaaaaaaaaaaaaa",
+      "usuario": "aaaaaaaaaaaaaaaaaa",
+      "motivo": "aaaaaaaaaaaaaaaa",
+      "descricao": "aaaaaaaaaaaaaaaa",
+      "imagem": "/uploads/1789334328310-3bdc0f77bcbfad4a.png",
+      "status": "APROVADO",
+      "data": "2026-09-13T21:18:48.319Z",
+      "aprovadoEm": "2026-09-13T21:19:16.150Z"
+    },
+    {
+      "id": 2,
+      "nome": "aaaaaaa",
+      "usuario": "aaaaaaaaaaaaaa",
+      "motivo": "aaaaaaaaaaaaa",
+      "descricao": "aaaaaaaaaaaaaaaaa",
+      "imagem": "/uploads/1789334886930-25e3d80051255ea2.png",
+      "status": "APROVADO",
+      "data": "2026-09-13T21:28:06.939Z",
+      "aprovadoEm": "2026-09-13T21:28:19.105Z"
+    }
+  ]
+}

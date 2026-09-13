@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Enviar denúncia - BLUESECURE</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+<body>
+
+    <!-- ==========================================
+         NAVBAR
+    =========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            BLUE<span>SECURE</span>
+        </div>
+
+        <nav>
+
+            <a href="index.html">
+                Início
+            </a>
+
+            <a href="index.html#pesquisar">
+                Pesquisar
+            </a>
+
+            <a href="index.html#sobre">
+                Sobre
+            </a>
+
+            <a
+                href="login.html"
+                class="btn-login"
+            >
+                Área administrativa
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- ==========================================
+         CONTEÚDO
+    =========================================== -->
+
+    <main>
+
+        <section class="search-section">
+
+            <div class="section-title">
+
+                <span>
+                    DENÚNCIA
+                </span>
+
+                <h2>
+                    Enviar denúncia
+                </h2>
+
+                <p>
+                    Envie informações e evidências para nossa equipe analisar.
+                </p>
+
+            </div>
+
+
+            <!-- ==================================
+                 AVISO
+            =================================== -->
+
+            <div
+                class="resultado-card"
+                style="
+                    margin-bottom:25px;
+                    border-color:#2c5fa8;
+                    background:#0d1522;
+                "
+            >
+
+                <div
+                    style="
+                        display:flex;
+                        gap:15px;
+                        align-items:flex-start;
+                    "
+                >
+
+                    <div
+                        style="
+                            font-size:25px;
+                        "
+                    >
+                        🛡️
+                    </div>
+
+                    <div>
+
+                        <strong
+                            style="
+                                color:#ffffff;
+                                font-size:16px;
+                            "
+                        >
+                            Sua denúncia será analisada
+                        </strong>
+
+                        <p
+                            style="
+                                margin-top:8px;
+                                color:#8e96a5;
+                                line-height:1.6;
+                            "
+                        >
+                            O conteúdo enviado não será publicado
+                            automaticamente. Nossa equipe irá analisar
+                            as informações antes de decidir se o caso
+                            poderá ser publicado.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- ==================================
+                 FORMULÁRIO
+            =================================== -->
+
+            <div class="resultado-card">
+
+                <form id="formDenuncia">
+
+                    <!-- NOME -->
+
+                    <label
+                        for="nome"
+                    >
+                        Nome ou identificação
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite o nome ou identificação"
+                        maxlength="100"
+                        required
+                    >
+
+
+                    <!-- FOTO -->
+
+                    <label
+                        for="foto"
+                        style="
+                            display:block;
+                            margin-top:20px;
+                        "
+                    >
+                        Foto ou evidência
+                    </label>
+
+                    <input
+                        type="file"
+                        id="foto"
+                        name="foto"
+                        accept="image/png,image/jpeg,image/webp"
+                        required
+                        style="
+                            width:100%;
+                            padding:12px;
+                            background:#0b0f15;
+                            border:1px solid #252c38;
+                            border-radius:8px;
+                            color:#8e96a5;
+                            margin-top:8px;
+                            box-sizing:border-box;
+                        "
+                    >
+
+                    <p
+                        style="
+                            margin-top:8px;
+                            color:#626b7b;
+                            font-size:13px;
+                        "
+                    >
+                        Formatos aceitos: JPG, PNG ou WEBP.
+                    </p>
+
+
+                    <!-- PREVIEW -->
+
+                    <div
+                        id="previewContainer"
+                        style="
+                            display:none;
+                            margin-top:20px;
+                        "
+                    >
+
+                        <p
+                            style="
+                                color:#8e96a5;
+                                margin-bottom:10px;
+                            "
+                        >
+                            Pré-visualização:
+                        </p>
+
+                        <img
+                            id="previewFoto"
+                            src=""
+                            alt="Pré-visualização"
+                            style="
+                                display:block;
+                                width:100%;
+                                max-height:350px;
+                                object-fit:contain;
+                                border-radius:10px;
+                                border:1px solid #252c38;
+                                background:#080b10;
+                            "
+                        >
+
+                    </div>
+
+
+                    <!-- MOTIVO -->
+
+                    <label
+                        for="motivo"
+                        style="
+                            display:block;
+                            margin-top:25px;
+                        "
+                    >
+                        Motivo da denúncia
+                    </label>
+
+                    <textarea
+                        id="motivo"
+                        name="motivo"
+                        placeholder="Explique detalhadamente o motivo da denúncia..."
+                        maxlength="3000"
+                        required
+                        style="
+                            min-height:180px;
+                            resize:vertical;
+                        "
+                    ></textarea>
+
+
+                    <!-- AVISO -->
+
+                    <div
+                        style="
+                            margin-top:20px;
+                            padding:15px;
+                            border-radius:8px;
+                            background:#17130b;
+                            border:1px solid #5d4818;
+                            color:#c9ad65;
+                            font-size:13px;
+                            line-height:1.6;
+                        "
+                    >
+
+                        ⚠️ Envie somente informações que possam
+                        ser verificadas pela equipe responsável.
+                        Denúncias falsas ou conteúdo ilegal poderão
+                        ser recusados.
+
+                    </div>
+
+
+                    <!-- BOTÃO -->
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                        style="
+                            width:100%;
+                            margin-top:20px;
+                        "
+                    >
+                        Enviar para análise
+                    </button>
+
+                </form>
+
+
+                <!-- MENSAGEM -->
+
+                <div
+                    id="mensagem"
+                    style="
+                        margin-top:15px;
+                    "
+                ></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ==========================================
+         FOOTER
+    =========================================== -->
+
+    <footer>
+
+        <div class="logo">
+            BLUE<span>SECURE</span>
+        </div>
+
+        <p>
+            © 2026 BLUESECURE. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script src="denuncia.js"></script>
+
+</body>
+
+</html>

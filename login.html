@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BLUESECURE</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+
+        <div class="logo">
+            BLUE<span>SECURE</span>
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <section class="search-section">
+
+            <div class="section-title">
+
+                <span>ÁREA RESTRITA</span>
+
+                <h2>Acesso administrativo</h2>
+
+                <p>
+                    Entre com sua senha para acessar o painel.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <form id="formLogin">
+
+                    <label>Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        placeholder="Digite sua senha"
+                        required
+                    >
+
+                    <button
+                        type="submit"
+                        class="btn-primary"
+                        style="
+                            margin-top:20px;
+                            width:100%;
+                        "
+                    >
+                        Entrar
+                    </button>
+
+                </form>
+
+                <div id="mensagem"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="login.js"></script>
+
+</body>
+
+</html>

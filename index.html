@@ -1,0 +1,1745 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>BLUESECURE</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+    <style>
+
+        /* ==========================================
+           BASE
+        ========================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(112, 72, 255, 0.14),
+                    transparent 30%
+                ),
+                radial-gradient(
+                    circle at 85% 20%,
+                    rgba(0, 255, 180, 0.06),
+                    transparent 28%
+                ),
+                #07080c;
+
+            color: #ffffff;
+        }
+
+
+        /* ==========================================
+           NAVBAR
+        ========================================== */
+
+        .navbar {
+
+            position: sticky;
+
+            top: 0;
+
+            z-index: 1000;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            min-height: 76px;
+
+            padding:
+                0 6%;
+
+            background:
+                rgba(7, 8, 12, 0.82);
+
+            border-bottom:
+                1px solid
+                rgba(255,255,255,0.07);
+
+            backdrop-filter:
+                blur(18px);
+        }
+
+        .navbar .logo {
+
+            font-size: 23px;
+
+            font-weight: 900;
+
+            letter-spacing: 2px;
+        }
+
+        .navbar .logo span {
+
+            color: #8c6cff;
+        }
+
+        .navbar nav {
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 26px;
+        }
+
+        .navbar nav a {
+
+            color: #a8a8b2;
+
+            text-decoration: none;
+
+            font-size: 14px;
+
+            font-weight: 600;
+
+            transition: 0.2s;
+        }
+
+        .navbar nav a:hover {
+
+            color: #ffffff;
+        }
+
+
+        /* ==========================================
+           HERO
+        ========================================== */
+
+        .hero {
+
+            position: relative;
+
+            min-height:
+                calc(100vh - 76px);
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding:
+                80px 20px;
+
+            overflow: hidden;
+        }
+
+        .hero::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 500px;
+
+            height: 500px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(117, 78, 255, 0.10);
+
+            filter:
+                blur(90px);
+
+            top: 5%;
+
+            left: 50%;
+
+            transform:
+                translateX(-50%);
+        }
+
+        .hero-content {
+
+            position: relative;
+
+            z-index: 1;
+
+            max-width: 850px;
+        }
+
+        .hero-tag {
+
+            display: inline-block;
+
+            padding:
+                8px 15px;
+
+            border-radius:
+                999px;
+
+            background:
+                rgba(140,108,255,0.10);
+
+            border:
+                1px solid
+                rgba(140,108,255,0.25);
+
+            color:
+                #a990ff;
+
+            font-size: 11px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+
+            margin-bottom: 25px;
+        }
+
+        .hero h1 {
+
+            margin: 0;
+
+            font-size:
+                clamp(42px, 7vw, 82px);
+
+            line-height: 1.02;
+
+            letter-spacing: -3px;
+
+            font-weight: 900;
+        }
+
+        .hero h1 span {
+
+            display: block;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    #ffffff,
+                    #9174ff
+                );
+
+            -webkit-background-clip: text;
+
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+
+            max-width: 650px;
+
+            margin:
+                25px auto 0;
+
+            color:
+                #999aa5;
+
+            font-size: 17px;
+
+            line-height: 1.7;
+        }
+
+        .hero-buttons {
+
+            margin-top: 35px;
+
+            display: flex;
+
+            justify-content: center;
+
+            gap: 12px;
+        }
+
+        .hero-buttons .btn-primary {
+
+            text-decoration: none;
+
+            padding:
+                14px 25px;
+
+            border-radius:
+                11px;
+
+            font-weight: 800;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7655ff,
+                    #9c7cff
+                );
+
+            color: #ffffff;
+
+            box-shadow:
+                0 15px 35px
+                rgba(118,85,255,0.22);
+
+            transition: 0.2s;
+        }
+
+        .hero-buttons .btn-primary:hover {
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ==========================================
+           CRIADOR
+        ========================================== */
+
+        .creator {
+
+            margin-top: 40px;
+
+            color: #777985;
+
+            font-size: 13px;
+
+            letter-spacing: 0.5px;
+        }
+
+        .creator strong {
+
+            color: #ffffff;
+
+            font-size: 15px;
+
+            margin-left: 5px;
+        }
+
+        .creator strong::after {
+
+            content: "";
+
+            display: inline-block;
+
+            width: 5px;
+
+            height: 5px;
+
+            margin-left: 7px;
+
+            margin-bottom: 2px;
+
+            border-radius: 50%;
+
+            background: #8c6cff;
+
+            box-shadow:
+                0 0 10px
+                rgba(140,108,255,0.8);
+        }
+
+
+        /* ==========================================
+           SEÇÕES
+        ========================================== */
+
+        .search-section {
+
+            width:
+                min(1120px, 92%);
+
+            margin:
+                0 auto;
+
+            padding:
+                90px 0;
+        }
+
+        .section-title {
+
+            text-align: center;
+
+            margin-bottom: 40px;
+        }
+
+        .section-title > span {
+
+            display: inline-block;
+
+            padding:
+                7px 12px;
+
+            border-radius:
+                999px;
+
+            color:
+                #9e87ff;
+
+            background:
+                rgba(140,108,255,0.09);
+
+            border:
+                1px solid
+                rgba(140,108,255,0.18);
+
+            font-size: 10px;
+
+            font-weight: 800;
+
+            letter-spacing: 2px;
+        }
+
+        .section-title h2 {
+
+            margin:
+                15px 0 10px;
+
+            font-size:
+                clamp(28px, 5vw, 42px);
+
+            letter-spacing:
+                -1px;
+        }
+
+        .section-title p {
+
+            margin: 0 auto;
+
+            max-width: 600px;
+
+            color:
+                #888995;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==========================================
+           REGISTROS PÚBLICOS
+        ========================================== */
+
+        #registrosPublicos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, minmax(0, 1fr));
+
+            gap: 20px;
+        }
+
+        #registrosPublicos > p {
+
+            grid-column:
+                1 / -1;
+        }
+
+        #registrosPublicos .resultado-card {
+
+            margin: 0 !important;
+
+            padding: 24px !important;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.018)
+                ) !important;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius:
+                17px;
+
+            transition:
+                0.25s;
+        }
+
+        #registrosPublicos .resultado-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(140,108,255,0.35);
+
+            box-shadow:
+                0 20px 45px
+                rgba(0,0,0,0.25);
+        }
+
+        #registrosPublicos h3 {
+
+            margin-top: 0;
+
+            font-size: 22px;
+        }
+
+        #registrosPublicos p {
+
+            color:
+                #999aa5;
+
+            line-height: 1.6;
+        }
+
+        #registrosPublicos strong {
+
+            color: #ffffff;
+        }
+
+        #registrosPublicos img {
+
+            max-height: 380px;
+
+            object-fit: cover;
+
+            box-shadow:
+                0 15px 35px
+                rgba(0,0,0,0.30);
+        }
+
+
+        /* ==========================================
+           PESQUISA
+        ========================================== */
+
+        .search-box {
+
+            display: flex;
+
+            gap: 10px;
+
+            max-width: 750px;
+
+            margin:
+                0 auto;
+        }
+
+        .search-box input {
+
+            flex: 1;
+
+            min-width: 0;
+
+            padding:
+                16px 18px;
+
+            border-radius:
+                12px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.09);
+
+            outline: none;
+
+            background:
+                rgba(0,0,0,0.30);
+
+            color:
+                #ffffff;
+
+            font-size: 15px;
+
+            transition: 0.2s;
+        }
+
+        .search-box input:focus {
+
+            border-color:
+                rgba(140,108,255,0.65);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(140,108,255,0.10);
+        }
+
+        .search-box button {
+
+            border: none;
+
+            padding:
+                0 24px;
+
+            border-radius:
+                12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7655ff,
+                    #9c7cff
+                );
+
+            color: #ffffff;
+
+            font-weight: 800;
+
+            cursor: pointer;
+
+            transition: 0.2s;
+        }
+
+        .search-box button:hover {
+
+            transform:
+                translateY(-2px);
+        }
+
+        #resultado {
+
+            margin-top:
+                25px;
+        }
+
+
+        /* ==========================================
+           SOBRE
+        ========================================== */
+
+        .info-section {
+
+            width:
+                min(1120px, 92%);
+
+            margin:
+                0 auto;
+
+            padding:
+                20px 0 90px;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 18px;
+        }
+
+        .info-card {
+
+            padding:
+                28px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius:
+                17px;
+
+            background:
+                rgba(255,255,255,0.025);
+
+            transition:
+                0.25s;
+        }
+
+        .info-card:hover {
+
+            transform:
+                translateY(-4px);
+
+            border-color:
+                rgba(140,108,255,0.30);
+        }
+
+        .info-card .icon {
+
+            width: 45px;
+
+            height: 45px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border-radius:
+                12px;
+
+            background:
+                rgba(140,108,255,0.10);
+
+            margin-bottom:
+                20px;
+
+            font-size: 20px;
+        }
+
+        .info-card h3 {
+
+            margin:
+                0 0 10px;
+        }
+
+        .info-card p {
+
+            margin: 0;
+
+            color:
+                #888995;
+
+            line-height: 1.6;
+        }
+
+
+        /* ==========================================
+           FORMULÁRIO
+        ========================================== */
+
+        #enviar .resultado-card {
+
+            max-width:
+                760px;
+
+            margin:
+                0 auto;
+
+            padding:
+                30px;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(255,255,255,0.055),
+                    rgba(255,255,255,0.018)
+                );
+
+            border:
+                1px solid
+                rgba(255,255,255,0.08);
+
+            border-radius:
+                18px;
+        }
+
+        #formSolicitacao label {
+
+            display: block;
+
+            margin-top: 18px;
+
+            margin-bottom: 8px;
+
+            color:
+                #d6d6dd;
+
+            font-size:
+                13px;
+
+            font-weight:
+                700;
+        }
+
+        #formSolicitacao label:first-child {
+
+            margin-top: 0;
+        }
+
+        #formSolicitacao input,
+        #formSolicitacao textarea {
+
+            width: 100%;
+
+            padding:
+                14px 15px;
+
+            border-radius:
+                11px;
+
+            border:
+                1px solid
+                rgba(255,255,255,0.09);
+
+            background:
+                rgba(0,0,0,0.30);
+
+            color:
+                #ffffff;
+
+            outline: none;
+
+            font-size:
+                14px;
+
+            transition:
+                0.2s;
+        }
+
+        #formSolicitacao textarea {
+
+            resize:
+                vertical;
+
+            min-height:
+                130px;
+        }
+
+        #formSolicitacao input:focus,
+        #formSolicitacao textarea:focus {
+
+            border-color:
+                rgba(140,108,255,0.65);
+
+            box-shadow:
+                0 0 0 3px
+                rgba(140,108,255,0.10);
+        }
+
+        #solicitacaoImagem {
+
+            cursor:
+                pointer;
+        }
+
+        #formSolicitacao button {
+
+            border: none;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #7655ff,
+                    #9c7cff
+                );
+
+            color:
+                #ffffff;
+
+            font-weight:
+                800;
+
+            padding:
+                15px;
+
+            border-radius:
+                11px;
+
+            cursor:
+                pointer;
+
+            transition:
+                0.2s;
+        }
+
+        #formSolicitacao button:hover {
+
+            transform:
+                translateY(-2px);
+        }
+
+
+        /* ==========================================
+           FOOTER
+        ========================================== */
+
+        footer {
+
+            padding:
+                50px 20px;
+
+            text-align:
+                center;
+
+            border-top:
+                1px solid
+                rgba(255,255,255,0.07);
+
+            background:
+                rgba(0,0,0,0.18);
+        }
+
+        footer .logo {
+
+            font-size:
+                20px;
+
+            font-weight:
+                900;
+
+            letter-spacing:
+                2px;
+        }
+
+        footer .logo span {
+
+            color:
+                #8c6cff;
+        }
+
+        footer p {
+
+            margin:
+                12px 0 0;
+
+            color:
+                #777985;
+
+            font-size:
+                13px;
+        }
+
+        .footer-creator {
+
+            margin-top:
+                12px;
+
+            color:
+                #a0a0aa;
+
+            font-size:
+                13px;
+        }
+
+        .footer-creator strong {
+
+            color:
+                #ffffff;
+        }
+
+
+        /* ==========================================
+           RESPONSIVO
+        ========================================== */
+
+        @media (max-width: 850px) {
+
+            .navbar {
+
+                padding:
+                    15px 5%;
+
+                flex-direction:
+                    column;
+
+                gap:
+                    14px;
+            }
+
+            .navbar nav {
+
+                gap:
+                    15px;
+
+                flex-wrap:
+                    wrap;
+
+                justify-content:
+                    center;
+            }
+
+            .navbar nav a {
+
+                font-size:
+                    13px;
+            }
+
+            .hero {
+
+                min-height:
+                    auto;
+
+                padding:
+                    100px 20px;
+            }
+
+            #registrosPublicos {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+            .info-section {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .hero h1 {
+
+                letter-spacing:
+                    -1.5px;
+            }
+
+            .hero p {
+
+                font-size:
+                    15px;
+            }
+
+            .hero-buttons {
+
+                width:
+                    100%;
+            }
+
+            .hero-buttons .btn-primary {
+
+                width:
+                    100%;
+            }
+
+            .search-box {
+
+                flex-direction:
+                    column;
+            }
+
+            .search-box button {
+
+                min-height:
+                    50px;
+            }
+
+            #enviar .resultado-card {
+
+                padding:
+                    20px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- ==========================================
+         NAVBAR
+    ========================================== -->
+
+    <header class="navbar">
+
+        <div class="logo">
+            BLUE<span>SECURE</span>
+        </div>
+
+
+        <nav>
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#pesquisar">
+                Pesquisar
+            </a>
+
+            <a href="#enviar">
+                Enviar registro
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <main>
+
+
+        <!-- ==========================================
+             HERO
+        ========================================== -->
+
+        <section
+            class="hero"
+            id="inicio"
+        >
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    PLATAFORMA DE CONSULTA
+                </span>
+
+
+                <h1>
+
+                    Consulte informações
+
+                    <span>
+                        de forma rápida e segura.
+                    </span>
+
+                </h1>
+
+
+                <p>
+
+                    Consulte registros de maneira simples,
+                    rápida e organizada através da
+                    BLUESECURE.
+
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="#pesquisar"
+                        class="btn-primary"
+                    >
+                        Começar agora
+                    </a>
+
+                </div>
+
+
+                <div class="creator">
+
+                    Criado por
+
+                    <strong>
+                        th.00.00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             REGISTROS APROVADOS
+        =========================================== -->
+
+        <section
+            class="search-section"
+            id="registros-aprovados"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    REGISTROS APROVADOS
+                </span>
+
+                <h2>
+                    Registros recentes
+                </h2>
+
+                <p>
+                    Confira os registros que foram
+                    aprovados pela administração.
+                </p>
+
+            </div>
+
+
+            <div id="registrosPublicos">
+
+                <p style="text-align:center;">
+                    Carregando registros...
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             PESQUISA
+        =========================================== -->
+
+        <section
+            class="search-section"
+            id="pesquisar"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    CONSULTA
+                </span>
+
+                <h2>
+                    Pesquisar informações
+                </h2>
+
+                <p>
+                    Utilize nossa busca para encontrar
+                    o que procura.
+                </p>
+
+            </div>
+
+
+            <div class="search-box">
+
+                <input
+                    type="text"
+                    id="campoPesquisa"
+                    placeholder="Digite sua pesquisa..."
+                >
+
+
+                <button
+                    type="button"
+                    onclick="pesquisar()"
+                >
+                    Pesquisar
+                </button>
+
+            </div>
+
+
+            <div id="resultado"></div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             SOBRE
+        =========================================== -->
+
+        <section
+            class="info-section"
+            id="sobre"
+        >
+
+            <div class="info-card">
+
+                <div class="icon">
+                    🔎
+                </div>
+
+                <h3>
+                    Pesquisa rápida
+                </h3>
+
+                <p>
+                    Encontre informações através
+                    de uma busca simples.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">
+                    🛡️
+                </div>
+
+                <h3>
+                    Organizado
+                </h3>
+
+                <p>
+                    Informações apresentadas de maneira
+                    clara e organizada.
+                </p>
+
+            </div>
+
+
+            <div class="info-card">
+
+                <div class="icon">
+                    ⚡
+                </div>
+
+                <h3>
+                    Rápido
+                </h3>
+
+                <p>
+                    Uma experiência simples e rápida
+                    para o usuário.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ==========================================
+             ENVIAR REGISTRO
+        =========================================== -->
+
+        <section
+            class="search-section"
+            id="enviar"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    SOLICITAÇÃO
+                </span>
+
+                <h2>
+                    Enviar registro
+                </h2>
+
+                <p>
+                    Envie as informações e a prova
+                    para análise da administração.
+                </p>
+
+            </div>
+
+
+            <div class="resultado-card">
+
+                <form
+                    id="formSolicitacao"
+                    method="POST"
+                    action="/api/solicitacao"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <label for="solicitacaoNome">
+                        Nome
+                    </label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoNome"
+                        name="nome"
+                        placeholder="Nome da pessoa"
+                        required
+                    >
+
+
+                    <label for="solicitacaoUsuario">
+                        Usuário
+                    </label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoUsuario"
+                        name="usuario"
+                        placeholder="Nome de usuário"
+                        required
+                    >
+
+
+                    <label for="solicitacaoMotivo">
+                        Motivo da solicitação
+                    </label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoMotivo"
+                        name="motivo"
+                        placeholder="Ex: golpe, fraude, comportamento inadequado..."
+                        required
+                    >
+
+
+                    <label for="solicitacaoDescricao">
+                        Descrição / Explicação
+                    </label>
+
+                    <textarea
+                        id="solicitacaoDescricao"
+                        name="descricao"
+                        rows="6"
+                        placeholder="Explique o que aconteceu..."
+                    ></textarea>
+
+
+                    <label for="solicitacaoImagem">
+                        Foto da prova
+                    </label>
+
+                    <input
+                        type="file"
+                        id="solicitacaoImagem"
+                        name="imagem"
+                        accept="image/png,image/jpeg,image/webp"
+                        required
+                    >
+
+
+                    <p style="
+                        margin-top:8px;
+                        color:#626b7b;
+                        font-size:13px;
+                    ">
+                        Envie uma imagem que comprove a situação.
+                        JPG, PNG ou WEBP. Máximo: 5 MB.
+                    </p>
+
+
+                    <button
+                        type="submit"
+                        style="
+                            width:100%;
+                            margin-top:20px;
+                        "
+                    >
+                        Enviar para análise
+                    </button>
+
+
+                    <p
+                        id="mensagemSolicitacao"
+                        style="
+                            margin-top:15px;
+                            text-align:center;
+                        "
+                    ></p>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- ==========================================
+         FOOTER
+    ========================================== -->
+
+    <footer>
+
+        <div class="logo">
+
+            BLUE<span>SECURE</span>
+
+        </div>
+
+
+        <p>
+            © 2026 BLUESECURE. Todos os direitos reservados.
+        </p>
+
+
+        <div class="footer-creator">
+
+            Criado por
+            <strong>th.00.00</strong>
+
+        </div>
+
+    </footer>
+
+
+
+    <script src="script.js"></script>
+
+
+    <script>
+
+        // ==========================================
+        // CARREGAR REGISTROS APROVADOS
+        // ==========================================
+
+        async function carregarRegistrosPublicos() {
+
+            const container =
+                document.getElementById(
+                    "registrosPublicos"
+                );
+
+            if (!container) {
+                return;
+            }
+
+            try {
+
+                const resposta =
+                    await fetch(
+                        "/api/registros-publicos"
+                    );
+
+
+                if (!resposta.ok) {
+
+                    throw new Error(
+                        "Erro ao carregar registros."
+                    );
+
+                }
+
+
+                const registros =
+                    await resposta.json();
+
+
+                if (
+                    !Array.isArray(registros) ||
+                    registros.length === 0
+                ) {
+
+                    container.innerHTML = `
+
+                        <p style="text-align:center;">
+                            Nenhum registro aprovado ainda.
+                        </p>
+
+                    `;
+
+                    return;
+
+                }
+
+
+                container.innerHTML =
+                    registros.map(
+                        registro => `
+
+                        <div
+                            class="resultado-card"
+                        >
+
+                            <h3>
+                                ${escaparHTML(
+                                    registro.nome
+                                )}
+                            </h3>
+
+
+                            <p>
+
+                                <strong>
+                                    Usuário:
+                                </strong>
+
+                                ${escaparHTML(
+                                    registro.usuario
+                                )}
+
+                            </p>
+
+
+                            <p>
+
+                                <strong>
+                                    Descrição:
+                                </strong>
+
+                                ${escaparHTML(
+                                    registro.descricao || ""
+                                )}
+
+                            </p>
+
+
+                            <p>
+
+                                <strong>
+                                    Status:
+                                </strong>
+
+                                <span
+                                    style="
+                                        color:#00ff88;
+                                        font-weight:800;
+                                    "
+                                >
+                                    APROVADO
+                                </span>
+
+                            </p>
+
+
+                            ${
+                                registro.imagem
+                                ? `
+
+                                    <img
+                                        src="${escaparHTML(
+                                            registro.imagem
+                                        )}"
+                                        alt="Prova do registro"
+                                        style="
+                                            width:100%;
+                                            max-width:500px;
+                                            margin-top:15px;
+                                            border-radius:10px;
+                                            display:block;
+                                        "
+                                    >
+
+                                  `
+                                : ""
+                            }
+
+                        </div>
+
+                    `
+                    ).join("");
+
+
+            } catch (erro) {
+
+                console.error(
+                    "ERRO AO CARREGAR REGISTROS:",
+                    erro
+                );
+
+
+                container.innerHTML = `
+
+                    <p style="text-align:center;">
+                        Não foi possível carregar os registros.
+                    </p>
+
+                `;
+
+            }
+
+        }
+
+
+        // ==========================================
+        // INICIAR REGISTROS
+        // ==========================================
+
+        carregarRegistrosPublicos();
+
+
+        // ==========================================
+        // ENVIAR SOLICITAÇÃO
+        // ==========================================
+
+        const formularioSolicitacao =
+            document.getElementById(
+                "formSolicitacao"
+            );
+
+
+        if (formularioSolicitacao) {
+
+            formularioSolicitacao.addEventListener(
+                "submit",
+                async function (event) {
+
+                    event.preventDefault();
+
+
+                    const formulario =
+                        this;
+
+
+                    const mensagem =
+                        document.getElementById(
+                            "mensagemSolicitacao"
+                        );
+
+
+                    const dados =
+                        new FormData(
+                            formulario
+                        );
+
+
+                    mensagem.textContent =
+                        "Enviando solicitação...";
+
+
+                    mensagem.style.color =
+                        "#aaa";
+
+
+                    try {
+
+                        const resposta =
+                            await fetch(
+                                "/api/solicitacao",
+                                {
+                                    method: "POST",
+                                    body: dados
+                                }
+                            );
+
+
+                        const resultado =
+                            await resposta.json();
+
+
+                        if (!resposta.ok) {
+
+                            throw new Error(
+                                resultado.erro ||
+                                "Erro ao enviar solicitação."
+                            );
+
+                        }
+
+
+                        mensagem.textContent =
+                            resultado.mensagem ||
+                            "Solicitação enviada para análise.";
+
+
+                        mensagem.style.color =
+                            "#00ff88";
+
+
+                        formulario.reset();
+
+
+                    } catch (erro) {
+
+                        console.error(
+                            "ERRO AO ENVIAR SOLICITAÇÃO:",
+                            erro
+                        );
+
+
+                        mensagem.textContent =
+                            erro.message ||
+                            "Erro ao enviar solicitação.";
+
+
+                        mensagem.style.color =
+                            "#ff5555";
+
+                    }
+
+                }
+            );
+
+        }
+
+    </script>
+
+
+</body>
+
+</html>
