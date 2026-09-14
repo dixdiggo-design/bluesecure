@@ -1863,9 +1863,72 @@ atualizarAcessos();
 
 </script>
 
+
+<!-- ==========================================
+     CONTADOR DE ACESSOS BLUESECURE
+     ========================================== -->
+
+<div id="contador-acessos" style="
+    width: fit-content;
+    margin: 25px auto;
+    padding: 12px 22px;
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.04);
+    color: #ffffff;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+">
+    👁️ Acessos no site:
+    <strong id="numero-acessos">0</strong>
+</div>
+
+<script>
+(async function() {
+
+    try {
+
+        await fetch("/api/acesso", {
+            method: "POST"
+        });
+
+        const resposta =
+            await fetch("/api/acessos");
+
+        const dados =
+            await resposta.json();
+
+        const contador =
+            document.getElementById(
+                "numero-acessos"
+            );
+
+        if (contador) {
+
+            contador.textContent =
+                Number(
+                    dados.acessos || 0
+                ).toLocaleString("pt-BR");
+
+        }
+
+    } catch (erro) {
+
+        console.error(
+            "Erro ao carregar contador:",
+            erro
+        );
+
+    }
+
+})();
+</script>
+
 </body>
 
 </html>
+
 
 
 
