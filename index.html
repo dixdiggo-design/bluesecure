@@ -1128,10 +1128,143 @@
 
         </section>
 
+<!-- ==========================================
+             ENVIAR REGISTRO
+        =========================================== -->
+
+        <section
+            class="search-section"
+            id="enviar"
+        >
+
+            <div class="section-title">
+
+                <span>
+                    SOLICITAÇÃO
+                </span>
+
+                <h2>
+                    Enviar registro
+                </h2>
+
+                <p>
+                    Envie as informações e a prova
+                    para análise da administração.
+                </p>
+
+            </div>
 
 
-        <!-- ==========================================
-             REGISTROS APROVADOS
+            <div class="resultado-card">
+
+                <form
+                    id="formSolicitacao"
+                    method="POST"
+                    action="/api/solicitacao"
+                    enctype="multipart/form-data"
+                >
+
+
+                    <label for="solicitacaoNome">
+                        LINK DO DISCORD
+                    </label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoNome"
+                        name="nome"
+                        placeholder="https://discord.gg/seu-link"
+                        required
+                    >
+
+
+                    <label for="solicitacaoUsuario">ORG GOLPISTA</label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoNome"
+                        name="nome"
+                        placeholder="Nome da organização golpista"
+                        required
+                    >
+
+
+                    <label for="solicitacaoMotivo">
+                        Motivo da solicitação
+                    </label>
+
+                    <input
+                        type="text"
+                        id="solicitacaoMotivo"
+                        name="motivo"
+                        placeholder="Ex: golpe, fraude, comportamento inadequado..."
+                        required
+                    >
+
+
+                    <label for="solicitacaoDescricao">
+                        Descrição / Explicação
+                    </label>
+
+                    <textarea
+                        id="solicitacaoDescricao"
+                        name="descricao"
+                        rows="6"
+                        placeholder="Explique o que aconteceu..."
+                    ></textarea>
+
+
+                    <label for="solicitacaoImagem">
+                        Foto da prova
+                    </label>
+
+                    <input
+                        type="file"
+                        id="solicitacaoImagem"
+                        name="imagem"
+                        accept="image/png,image/jpeg,image/webp"
+                        required
+                    >
+
+
+                    <p style="
+                        margin-top:8px;
+                        color:#626b7b;
+                        font-size:13px;
+                    ">
+                        Envie uma imagem que comprove a situação.
+                        JPG, PNG ou WEBP. Máximo: 5 MB.
+                    </p>
+
+
+                    <button
+                        type="submit"
+                        style="
+                            width:100%;
+                            margin-top:20px;
+                        "
+                    >
+                        Enviar para análise
+                    </button>
+
+
+                    <p
+                        id="mensagemSolicitacao"
+                        style="
+                            margin-top:15px;
+                            text-align:center;
+                        "
+                    ></p>
+
+
+                </form>
+
+            </div>
+
+        </section>
+
+<!-- ==========================================
+     REGISTROS APROVADOS
         =========================================== -->
 
         <section
@@ -1280,143 +1413,6 @@
                     Uma experiência simples e rápida
                     para o usuário.
                 </p>
-
-            </div>
-
-        </section>
-
-
-
-        <!-- ==========================================
-             ENVIAR REGISTRO
-        =========================================== -->
-
-        <section
-            class="search-section"
-            id="enviar"
-        >
-
-            <div class="section-title">
-
-                <span>
-                    SOLICITAÇÃO
-                </span>
-
-                <h2>
-                    Enviar registro
-                </h2>
-
-                <p>
-                    Envie as informações e a prova
-                    para análise da administração.
-                </p>
-
-            </div>
-
-
-            <div class="resultado-card">
-
-                <form
-                    id="formSolicitacao"
-                    method="POST"
-                    action="/api/solicitacao"
-                    enctype="multipart/form-data"
-                >
-
-
-                    <label for="solicitacaoNome">
-                        LINK DO DISCORD
-                    </label>
-
-                    <input
-                        type="text"
-                        id="solicitacaoNome"
-                        name="nome"
-                        placeholder="https://discord.gg/seu-link"
-                        required
-                    >
-
-
-                    <label for="solicitacaoUsuario">ORG GOLPISTA</label>
-
-                    <input
-                        type="text"
-                        id="solicitacaoNome"
-                        name="nome"
-                        placeholder="Nome da organização golpista"
-                        required
-                    >
-
-
-                    <label for="solicitacaoMotivo">
-                        Motivo da solicitação
-                    </label>
-
-                    <input
-                        type="text"
-                        id="solicitacaoMotivo"
-                        name="motivo"
-                        placeholder="Ex: golpe, fraude, comportamento inadequado..."
-                        required
-                    >
-
-
-                    <label for="solicitacaoDescricao">
-                        Descrição / Explicação
-                    </label>
-
-                    <textarea
-                        id="solicitacaoDescricao"
-                        name="descricao"
-                        rows="6"
-                        placeholder="Explique o que aconteceu..."
-                    ></textarea>
-
-
-                    <label for="solicitacaoImagem">
-                        Foto da prova
-                    </label>
-
-                    <input
-                        type="file"
-                        id="solicitacaoImagem"
-                        name="imagem"
-                        accept="image/png,image/jpeg,image/webp"
-                        required
-                    >
-
-
-                    <p style="
-                        margin-top:8px;
-                        color:#626b7b;
-                        font-size:13px;
-                    ">
-                        Envie uma imagem que comprove a situação.
-                        JPG, PNG ou WEBP. Máximo: 5 MB.
-                    </p>
-
-
-                    <button
-                        type="submit"
-                        style="
-                            width:100%;
-                            margin-top:20px;
-                        "
-                    >
-                        Enviar para análise
-                    </button>
-
-
-                    <p
-                        id="mensagemSolicitacao"
-                        style="
-                            margin-top:15px;
-                            text-align:center;
-                        "
-                    ></p>
-
-
-                </form>
 
             </div>
 
