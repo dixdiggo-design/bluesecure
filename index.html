@@ -1026,6 +1026,50 @@
         }
     </style>
 
+
+<!-- CONTADOR DE ACESSOS BLUESECURE -->
+<style id="contador-acessos-style">
+
+.contador-acessos-blue {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 20px auto;
+
+    padding: 10px 18px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    color: #a9a9b8;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: .4px;
+
+}
+
+.contador-acessos-blue strong {
+
+    color: #ffffff;
+
+    margin-left: 5px;
+
+}
+
+</style>
+
 </head>
 
 
@@ -1127,6 +1171,13 @@
             </div>
 
         </section>
+
+<!-- CONTADOR DE ACESSOS BLUESECURE -->
+<div class="contador-acessos-blue">
+    👁️ ACESSOS:
+    <strong id="numero-acessos">0</strong>
+</div>
+
 
 <!-- ==========================================
              ENVIAR REGISTRO
@@ -1731,6 +1782,84 @@
 
     </script>
 
+
+
+<script id="contador-acessos-script">
+
+async function atualizarAcessos() {
+
+    try {
+
+        const respostaRegistro =
+            await fetch(
+                "/api/acesso",
+                {
+                    method: "POST",
+                    cache: "no-store"
+                }
+            );
+
+        if (!respostaRegistro.ok) {
+
+            console.error(
+                "Não foi possível registrar o acesso."
+            );
+
+            return;
+
+        }
+
+        const resposta =
+            await fetch(
+                "/api/acessos",
+                {
+                    cache: "no-store"
+                }
+            );
+
+        if (!resposta.ok) {
+
+            console.error(
+                "Não foi possível consultar os acessos."
+            );
+
+            return;
+
+        }
+
+        const dados =
+            await resposta.json();
+
+        const elemento =
+            document.getElementById(
+                "numero-acessos"
+            );
+
+        if (elemento) {
+
+            elemento.textContent =
+                Number(
+                    dados.acessos || 0
+                ).toLocaleString(
+                    "pt-BR"
+                );
+
+        }
+
+    } catch (erro) {
+
+        console.error(
+            "ERRO NO CONTADOR:",
+            erro
+        );
+
+    }
+
+}
+
+atualizarAcessos();
+
+</script>
 
 </body>
 
