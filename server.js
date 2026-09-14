@@ -1777,6 +1777,111 @@ app.use(
 // INICIAR SERVIDOR
 // ==========================================
 
+
+// ==========================================
+// CONTADOR DE ACESSOS BLUESECURE
+// ==========================================
+
+app.get("/api/acessos", (req, res) => {
+
+    try {
+
+        const arquivo =
+            fs.readFileSync(
+                CAMINHO_DADOS,
+                "utf8"
+            );
+
+        const banco =
+            JSON.parse(arquivo);
+
+        res.json({
+
+            acessos:
+                Number(
+                    banco.acessos || 0
+                )
+
+        });
+
+    } catch (erro) {
+
+        console.error(
+            "ERRO AO LER ACESSOS:",
+            erro
+        );
+
+        res.status(500).json({
+
+            acessos: 0
+
+        });
+
+    }
+
+});
+
+
+app.post("/api/acesso", (req, res) => {
+
+    try {
+
+        const arquivo =
+            fs.readFileSync(
+                CAMINHO_DADOS,
+                "utf8"
+            );
+
+        const banco =
+            JSON.parse(arquivo);
+
+        banco.acessos =
+            Number(
+                banco.acessos || 0
+            ) + 1;
+
+        fs.writeFileSync(
+
+            CAMINHO_DADOS,
+
+            JSON.stringify(
+                banco,
+                null,
+                2
+            ),
+
+            "utf8"
+
+        );
+
+        res.json({
+
+            sucesso: true,
+
+            acessos:
+                banco.acessos
+
+        });
+
+    } catch (erro) {
+
+        console.error(
+            "ERRO AO REGISTRAR ACESSO:",
+            erro
+        );
+
+        res.status(500).json({
+
+            sucesso: false,
+
+            acessos: 0
+
+        });
+
+    }
+
+});
+
 app.listen(
     PORT,
     () => {
@@ -1787,4 +1892,5 @@ app.listen(
 
     }
 );
+
 
