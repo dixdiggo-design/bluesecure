@@ -1366,30 +1366,7 @@ select:focus {
    CONTADOR
    ========================================== */
 
-#contador-acessos {
-    margin: 25px 0 !important;
 
-    padding: 15px 22px !important;
-
-    border-radius: 18px !important;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(100, 48, 170, 0.18),
-            rgba(30, 15, 45, 0.55)
-        ) !important;
-
-    border:
-        1px solid rgba(145, 76, 255, 0.20) !important;
-
-    color: #aaa2b2 !important;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.20);
-
-    text-align: left !important;
-}
 
 #contador-acessos strong {
     color: #b98cff !important;
@@ -1562,35 +1539,7 @@ button:hover,
 <!-- CONTADOR DE ACESSOS BLUESECURE -->
 <style id="contador-acessos-style">
 
-.contador-acessos-blue {
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    width: fit-content;
-
-    margin: 20px auto;
-
-    padding: 10px 18px;
-
-    border-radius: 999px;
-
-    background: rgba(255,255,255,0.05);
-
-    border: 1px solid rgba(255,255,255,0.12);
-
-    color: #a9a9b8;
-
-    font-size: 13px;
-
-    font-weight: 700;
-
-    letter-spacing: .4px;
-
-}
 
 .contador-acessos-blue strong {
 
@@ -1940,30 +1889,7 @@ select:focus {
    CONTADOR
    ========================================== */
 
-#contador-acessos {
-    margin: 25px 0 !important;
 
-    padding: 15px 22px !important;
-
-    border-radius: 18px !important;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(100, 48, 170, 0.18),
-            rgba(30, 15, 45, 0.55)
-        ) !important;
-
-    border:
-        1px solid rgba(145, 76, 255, 0.20) !important;
-
-    color: #aaa2b2 !important;
-
-    box-shadow:
-        0 10px 30px rgba(0,0,0,0.20);
-
-    text-align: left !important;
-}
 
 #contador-acessos strong {
     color: #b98cff !important;
@@ -2132,6 +2058,196 @@ button:hover,
 
 </style>
 
+
+<style id="contador-acessos-css">
+#contador-acessos {
+    margin-top: 18px;
+    padding: 12px 18px;
+    border: 1px solid rgba(255,255,255,.10);
+    border-radius: 12px;
+    background: rgba(255,255,255,.04);
+    text-align: center;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+#contador-acessos .contador-titulo {
+    font-size: 12px;
+    opacity: .7;
+    margin-bottom: 4px;
+}
+
+#contador-acessos strong {
+    font-size: 22px;
+    color: #8b5cf6;
+}
+</style>
+
+
+
+<style id="menu-parceiros-acessos-css">
+
+.navbar nav .link-parceiros {
+    display: flex !important;
+    align-items: center;
+    gap: 14px;
+    min-height: 54px;
+    padding: 0 18px !important;
+    border-radius: 30px;
+    color: #9d91aa !important;
+    text-decoration: none;
+    font-size: 16px !important;
+    font-weight: 600;
+    transition: 0.2s ease;
+}
+
+.navbar nav .link-parceiros::before {
+    content: "🤝";
+    width: 25px;
+    min-width: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar nav .link-parceiros:hover {
+    background: rgba(139, 78, 255, 0.14);
+    color: #ffffff !important;
+    transform: translateX(3px);
+}
+
+#contador-acessos-menu {
+    margin-top: 12px;
+    padding: 12px 15px;
+    border-radius: 15px;
+    border: 1px solid rgba(145, 76, 255, 0.18);
+    background: rgba(255,255,255,0.035);
+    text-align: center;
+}
+
+#contador-acessos-menu span {
+    display: block;
+    color: #9d91aa;
+    font-size: 11px;
+    margin-bottom: 4px;
+}
+
+#contador-acessos-menu strong {
+    display: block;
+    color: #b98cff;
+    font-size: 20px;
+}
+
+</style>
+
+<style id="menu-parceiros-contador-final">
+
+.link-parceiros {
+    display: flex !important;
+    align-items: center !important;
+    gap: 12px !important;
+}
+
+#contador-acessos-menu {
+    width: 100%;
+    margin-top: 18px;
+    padding: 18px 20px;
+    border-radius: 18px;
+    background: rgba(255,255,255,0.045);
+    border: 1px solid rgba(255,255,255,0.08);
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#contador-acessos-menu .contador-titulo {
+    color: #aaa;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+#contador-acessos-menu strong {
+    display: block;
+    color: #fff;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+@media (max-width: 900px) {
+
+    #contador-acessos-menu {
+        margin-top: 12px;
+    }
+
+}
+
+</style>
+<style id="FORCAR-PARCEIROS-CONTADOR">
+
+.navbar nav .link-parceiros {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    height: 54px !important;
+    min-height: 54px !important;
+    color: #ffffff !important;
+}
+
+.navbar nav #contador-acessos-menu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: relative !important;
+    z-index: 9999 !important;
+    width: 100% !important;
+    min-height: 75px !important;
+    margin-top: 10px !important;
+    padding: 16px !important;
+    box-sizing: border-box !important;
+    color: #ffffff !important;
+    background: rgba(255,255,255,0.06) !important;
+    border: 1px solid rgba(255,255,255,0.12) !important;
+    border-radius: 16px !important;
+}
+
+.navbar nav #contador-acessos-menu .contador-titulo {
+    display: block !important;
+    color: #aaa !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+}
+
+.navbar nav #contador-acessos-menu strong {
+    display: block !important;
+    color: #ffffff !important;
+    font-size: 25px !important;
+    font-weight: 800 !important;
+    text-align: center !important;
+}
+
+@media (max-width: 900px) {
+
+    .navbar.menu-aberto nav .link-parceiros {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    .navbar.menu-aberto nav #contador-acessos-menu {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+}
+
+</style>
 </head>
 
 
@@ -2150,20 +2266,35 @@ button:hover,
 
 
         <nav>
+    <a href="#inicio">
+        Início
+    </a>
 
-            <a href="#inicio">
-                Início
-            </a>
+    <a href="#pesquisar">
+        Pesquisar
+    </a>
 
-            <a href="#pesquisar">
-                Pesquisar
-            </a>
+    <a href="#enviar">
+        Enviar registro
+    </a>
 
-            <a href="#enviar">
-                Enviar registro
-            </a>
+    <a
+        href="https://discord.gg/orgleiteninho"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="link-parceiros"
+    >
+        🤝 Parceiros
+    </a>
 
-        </nav>
+    <div id="contador-acessos-menu">
+        <div class="contador-titulo">
+            👁️ ACESSOS
+        </div>
+
+        <strong id="numero-acessos">0</strong>
+    </div>
+</nav>
 
     </header>
 
@@ -2234,11 +2365,7 @@ button:hover,
 
         </section>
 
-<!-- CONTADOR DE ACESSOS BLUESECURE -->
-<div class="contador-acessos-blue">
-    👁️ ACESSOS:
-    <strong id="numero-acessos">0</strong>
-</div>
+
 
 
 <!-- ==========================================
@@ -2780,144 +2907,12 @@ button:hover,
 
 
 
-<script id="contador-acessos-script">
-
-async function atualizarAcessos() {
-
-    try {
-
-        const respostaRegistro =
-            await fetch(
-                "/api/acesso",
-                {
-                    method: "POST",
-                    cache: "no-store"
-                }
-            );
-
-        if (!respostaRegistro.ok) {
-
-            console.error(
-                "Não foi possível registrar o acesso."
-            );
-
-            return;
-
-        }
-
-        const resposta =
-            await fetch(
-                "/api/acessos",
-                {
-                    cache: "no-store"
-                }
-            );
-
-        if (!resposta.ok) {
-
-            console.error(
-                "Não foi possível consultar os acessos."
-            );
-
-            return;
-
-        }
-
-        const dados =
-            await resposta.json();
-
-        const elemento =
-            document.getElementById(
-                "numero-acessos"
-            );
-
-        if (elemento) {
-
-            elemento.textContent =
-                Number(
-                    dados.acessos || 0
-                ).toLocaleString(
-                    "pt-BR"
-                );
-
-        }
-
-    } catch (erro) {
-
-        console.error(
-            "ERRO NO CONTADOR:",
-            erro
-        );
-
-    }
-
-}
-
-atualizarAcessos();
-
-</script>
 
 
-<!-- ==========================================
-     CONTADOR DE ACESSOS BLUESECURE
-     ========================================== -->
 
-<div id="contador-acessos" style="
-    width: fit-content;
-    margin: 25px auto;
-    padding: 12px 22px;
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 12px;
-    background: rgba(255,255,255,0.04);
-    color: #ffffff;
-    text-align: center;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-">
-    👁️ Acessos no site:
-    <strong id="numero-acessos">0</strong>
-</div>
 
-<script>
-(async function() {
 
-    try {
 
-        await fetch("/api/acesso", {
-            method: "POST"
-        });
-
-        const resposta =
-            await fetch("/api/acessos");
-
-        const dados =
-            await resposta.json();
-
-        const contador =
-            document.getElementById(
-                "numero-acessos"
-            );
-
-        if (contador) {
-
-            contador.textContent =
-                Number(
-                    dados.acessos || 0
-                ).toLocaleString("pt-BR");
-
-        }
-
-    } catch (erro) {
-
-        console.error(
-            "Erro ao carregar contador:",
-            erro
-        );
-
-    }
-
-})();
-</script>
 
 
 <script>
@@ -3066,78 +3061,69 @@ document.addEventListener("DOMContentLoaded", function() {
 </script>
 
 
-<script>
 
-/* ==========================================
-   COLOCAR CONTADOR DENTRO DO MENU
-   ========================================== */
 
-document.addEventListener("DOMContentLoaded", function() {
 
-    const contador =
-        document.getElementById("contador-acessos");
 
-    const menu =
-        document.querySelector(".navbar");
 
-    const navegacao =
-        document.querySelector(".navbar nav");
 
-    if (!contador || !menu) {
 
-        console.log(
-            "Contador ou menu não encontrado."
-        );
 
+<script id="contador-acessos-final">
+document.addEventListener("DOMContentLoaded", async function () {
+
+    const contador = document.getElementById("numero-acessos");
+
+    if (!contador) {
+        console.log("CONTADOR: elemento não encontrado.");
         return;
-
     }
 
-    /* Remove o contador da área principal
-       e coloca dentro da sidebar */
+    try {
 
-    contador.style.margin = "auto 10px 0 10px";
+        const resposta = await fetch("/api/acesso", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: "{}",
+            cache: "no-store"
+        });
 
-    contador.style.width = "auto";
+        const dados = await resposta.json();
 
-    contador.style.boxSizing = "border-box";
+        contador.textContent =
+            Number(dados.acessos || 0).toLocaleString("pt-BR");
 
-    contador.style.textAlign = "center";
-
-    contador.style.padding = "14px 16px";
-
-    contador.style.borderRadius = "18px";
-
-    contador.style.background =
-        "rgba(145, 76, 255, 0.08)";
-
-    contador.style.border =
-        "1px solid rgba(145, 76, 255, 0.18)";
-
-    contador.style.fontSize = "13px";
-
-    /* Coloca dentro do menu */
-
-    if (navegacao) {
-
-        navegacao.insertAdjacentElement(
-            "afterend",
-            contador
+        console.log(
+            "ACESSOS ATUALIZADOS:",
+            dados.acessos
         );
 
-    } else {
+    } catch (erro) {
 
-        menu.appendChild(contador);
+        console.error(
+            "ERRO NO CONTADOR:",
+            erro
+        );
 
     }
 
 });
-
 </script>
-
 </body>
 
 </html>
+
+
+
+
+
+
+
+
+
+
 
 
 
