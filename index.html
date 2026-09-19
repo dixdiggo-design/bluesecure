@@ -3065,9 +3065,80 @@ document.addEventListener("DOMContentLoaded", function() {
 
 </script>
 
+
+<script>
+
+/* ==========================================
+   COLOCAR CONTADOR DENTRO DO MENU
+   ========================================== */
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    const contador =
+        document.getElementById("contador-acessos");
+
+    const menu =
+        document.querySelector(".navbar");
+
+    const navegacao =
+        document.querySelector(".navbar nav");
+
+    if (!contador || !menu) {
+
+        console.log(
+            "Contador ou menu não encontrado."
+        );
+
+        return;
+
+    }
+
+    /* Remove o contador da área principal
+       e coloca dentro da sidebar */
+
+    contador.style.margin = "auto 10px 0 10px";
+
+    contador.style.width = "auto";
+
+    contador.style.boxSizing = "border-box";
+
+    contador.style.textAlign = "center";
+
+    contador.style.padding = "14px 16px";
+
+    contador.style.borderRadius = "18px";
+
+    contador.style.background =
+        "rgba(145, 76, 255, 0.08)";
+
+    contador.style.border =
+        "1px solid rgba(145, 76, 255, 0.18)";
+
+    contador.style.fontSize = "13px";
+
+    /* Coloca dentro do menu */
+
+    if (navegacao) {
+
+        navegacao.insertAdjacentElement(
+            "afterend",
+            contador
+        );
+
+    } else {
+
+        menu.appendChild(contador);
+
+    }
+
+});
+
+</script>
+
 </body>
 
 </html>
+
 
 
 
