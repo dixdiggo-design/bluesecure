@@ -2651,6 +2651,120 @@ button:hover,
 }
 
 </style>
+<style id="CORRECAO-MENU-MOBILE-FINAL">
+
+/* ==========================================
+   CORREÇÃO MENU MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+    /* Botão dos 3 traços */
+
+    #menu-mobile {
+        position: fixed !important;
+
+        top: 16px !important;
+        left: 16px !important;
+
+        width: 46px !important;
+        height: 46px !important;
+
+        z-index: 100001 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        border: 1px solid rgba(255,255,255,0.10) !important;
+        border-radius: 13px !important;
+
+        background:
+            rgba(15, 15, 25, 0.94) !important;
+
+        color: #ffffff !important;
+
+        font-size: 25px !important;
+        line-height: 1 !important;
+
+        box-shadow:
+            0 8px 25px rgba(0,0,0,0.35),
+            0 0 15px rgba(88,101,242,0.08) !important;
+
+        cursor: pointer !important;
+    }
+
+    /* Menu lateral */
+
+    .navbar {
+        z-index: 100000 !important;
+
+        padding-top: 78px !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+    }
+
+    /* Logo BLUESECURE */
+
+    .navbar .logo {
+        position: relative !important;
+
+        z-index: 1 !important;
+
+        margin-top: 0 !important;
+
+        white-space: nowrap !important;
+    }
+
+    /* Botão fechar */
+
+    #fechar-menu {
+        position: absolute !important;
+
+        top: 16px !important;
+        right: 16px !important;
+
+        z-index: 100002 !important;
+
+        width: 42px !important;
+        height: 42px !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        border-radius: 12px !important;
+
+        background: rgba(255,255,255,0.06) !important;
+        border: 1px solid rgba(255,255,255,0.08) !important;
+
+        color: #ffffff !important;
+
+        font-size: 25px !important;
+        line-height: 1 !important;
+    }
+
+    /* Evita que o conteúdo do menu fique por cima do logo */
+
+    .navbar nav {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+
+}
+
+/* Desktop continua normal */
+
+@media (min-width: 901px) {
+
+    #menu-mobile {
+        display: none !important;
+    }
+
+}
+
+</style>
 </head>
 
 
@@ -3573,6 +3687,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+
 
 
 
