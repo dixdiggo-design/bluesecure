@@ -2579,10 +2579,87 @@ button:hover,
 }
 
 </style>
+<style id="ACESSOS-SITE-FINAL">
+
+#acessos-site {
+    position: fixed;
+
+    top: 20px;
+    right: 24px;
+
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 9px 13px;
+
+    border-radius: 12px;
+
+    background: rgba(15, 15, 25, 0.88);
+
+    border: 1px solid rgba(88, 101, 242, 0.22);
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.20),
+        0 0 15px rgba(88,101,242,0.05);
+
+    backdrop-filter: blur(12px);
+
+    font-size: 11px;
+}
+
+.acessos-site-icone {
+    color: #6dff9a;
+
+    font-size: 7px;
+
+    text-shadow:
+        0 0 8px rgba(109,255,154,0.8);
+}
+
+.acessos-site-texto {
+    color: #9292a5;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+#numero-acessos-site {
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    #acessos-site {
+        top: 15px;
+        right: 15px;
+
+        padding: 8px 11px;
+    }
+
+}
+
+</style>
 </head>
 
 
 <body>
+<div id="acessos-site">
+    <span class="acessos-site-icone">●</span>
+    <span class="acessos-site-texto">ACESSOS</span>
+    <strong id="numero-acessos-site">0</strong>
+</div>
 
 
     <!-- ==========================================
@@ -3455,9 +3532,48 @@ document.addEventListener("DOMContentLoaded", async function () {
 
 });
 </script>
+<script id="ACESSOS-SITE-SCRIPT">
+document.addEventListener("DOMContentLoaded", function () {
+
+    const numeroSite =
+        document.getElementById("numero-acessos-site");
+
+    const numeroMenu =
+        document.getElementById("numero-acessos");
+
+    if (!numeroSite) return;
+
+    function atualizarNumero() {
+
+        if (numeroMenu) {
+            numeroSite.textContent =
+                numeroMenu.textContent;
+        }
+
+    }
+
+    atualizarNumero();
+
+    const observador = new MutationObserver(
+        atualizarNumero
+    );
+
+    if (numeroMenu) {
+
+        observador.observe(numeroMenu, {
+            childList: true,
+            characterData: true,
+            subtree: true
+        });
+
+    }
+
+});
+</script>
 </body>
 
 </html>
+
 
 
 
