@@ -4523,3 +4523,154 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 }
 </style>
+<style id="LAYOUT-PRINCIPAL-COMPACTO">
+/* ==========================================
+   PÁGINA PRINCIPAL MAIS COMPACTA
+========================================== */
+
+main {
+    gap: 0 !important;
+}
+
+section {
+    margin-top: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+.categoria,
+.categoria-card,
+.card-categoria,
+.cards,
+.grid,
+.resultados,
+.lista-resultados {
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+}
+
+/* Remove espaços exagerados entre cards */
+.card,
+.resultado,
+.item,
+.registro,
+.registro-card {
+    margin-bottom: 8px !important;
+}
+
+/* ==========================================
+   NOME DO CRIADOR NO CENTRO
+========================================== */
+
+#criador-site {
+    position: fixed !important;
+    top: 16px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+
+    z-index: 99999 !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    height: 46px !important;
+    padding: 0 18px !important;
+
+    border-radius: 12px !important;
+
+    background: rgba(15, 15, 25, 0.88) !important;
+    border: 1px solid rgba(124, 92, 255, 0.22) !important;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,.20),
+        0 0 15px rgba(124,92,255,.08) !important;
+
+    backdrop-filter: blur(12px) !important;
+
+    color: #ffffff !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    letter-spacing: .5px !important;
+
+    white-space: nowrap !important;
+}
+
+#criador-site span {
+    color: #9b7cff !important;
+    text-shadow: 0 0 10px rgba(124,92,255,.55) !important;
+    margin-left: 4px !important;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 900px) {
+
+    #criador-site {
+        top: 16px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+
+        height: 42px !important;
+        padding: 0 13px !important;
+
+        font-size: 10px !important;
+        border-radius: 11px !important;
+    }
+
+    /* Mais espaço para o topo não ficar sobre o conteúdo */
+    main {
+        padding-top: 72px !important;
+    }
+
+    section {
+        margin-top: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .categoria,
+    .categoria-card,
+    .card-categoria,
+    .cards,
+    .grid,
+    .resultados,
+    .lista-resultados {
+        gap: 5px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .card,
+    .resultado,
+    .item,
+    .registro,
+    .registro-card {
+        margin-bottom: 5px !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    #criador-site {
+        font-size: 9px !important;
+        padding: 0 10px !important;
+    }
+}
+</style>
+<script id="CRIADOR-SITE-CENTRAL">
+document.addEventListener("DOMContentLoaded", function () {
+
+    if (document.getElementById("criador-site")) return;
+
+    const criador = document.createElement("div");
+
+    criador.id = "criador-site";
+
+    criador.innerHTML = 
+        CRIADOR:
+        <span>DIX DIGGO</span>
+    ;
+
+    document.body.appendChild(criador);
+});
+</script>
