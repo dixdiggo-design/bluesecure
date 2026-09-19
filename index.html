@@ -4358,3 +4358,65 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
+<style id="AJUSTE-CONTADOR-ACESSOS-MOBILE">
+@media (max-width: 900px) {
+
+    .navbar nav #contador-acessos-menu {
+        width: 100% !important;
+        min-width: 0 !important;
+        height: 78px !important;
+        min-height: 78px !important;
+        max-height: 78px !important;
+
+        box-sizing: border-box !important;
+        padding: 12px 16px !important;
+        margin: 10px 0 0 0 !important;
+
+        display: flex !important;
+        align-items: center !important;
+        gap: 10px !important;
+
+        overflow: visible !important;
+        flex-shrink: 0 !important;
+    }
+
+    .navbar nav #contador-acessos-menu .contador-titulo {
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
+        font-size: 10px !important;
+    }
+
+    .navbar nav #contador-acessos-menu strong {
+        display: block !important;
+        min-width: 0 !important;
+        width: auto !important;
+
+        font-size: 21px !important;
+        line-height: 1.2 !important;
+        white-space: nowrap !important;
+
+        overflow: visible !important;
+        text-overflow: clip !important;
+        flex-shrink: 0 !important;
+    }
+
+    #contador-acessos-menu::before {
+        flex-shrink: 0 !important;
+    }
+}
+
+@media (max-width: 380px) {
+
+    .navbar nav #contador-acessos-menu {
+        height: 72px !important;
+        min-height: 72px !important;
+        max-height: 72px !important;
+        padding: 10px 13px !important;
+        gap: 8px !important;
+    }
+
+    .navbar nav #contador-acessos-menu strong {
+        font-size: 19px !important;
+    }
+}
+</style>
