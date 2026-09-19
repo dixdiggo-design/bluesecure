@@ -2765,6 +2765,108 @@ button:hover,
 }
 
 </style>
+<style id="TAMANHO-MENU-MOBILE-FINAL">
+
+/* ==========================================
+   MENU MOBILE - TAMANHO DAS OPÇÕES
+========================================== */
+
+@media (max-width: 900px) {
+
+    .navbar nav {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 8px !important;
+    }
+
+    .navbar nav a {
+        width: 100% !important;
+
+        min-height: 54px !important;
+        height: 54px !important;
+
+        padding: 0 18px !important;
+
+        display: flex !important;
+        align-items: center !important;
+
+        box-sizing: border-box !important;
+
+        font-size: 15px !important;
+        font-weight: 600 !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        transform: none !important;
+
+        letter-spacing: normal !important;
+    }
+
+    .navbar nav a::before {
+        font-size: 20px !important;
+        min-width: 22px !important;
+    }
+
+    /* Parceiros */
+
+    .navbar nav a.link-parceiros {
+        min-height: 58px !important;
+        height: 58px !important;
+
+        font-size: 15px !important;
+
+        padding: 0 18px !important;
+    }
+
+    .navbar nav a.link-parceiros .discord-icone {
+        width: 34px !important;
+        height: 34px !important;
+        min-width: 34px !important;
+    }
+
+    .navbar nav a.link-parceiros .parceiros-texto {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 3px !important;
+    }
+
+    .navbar nav a.link-parceiros .parceiros-texto strong {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+    }
+
+    .navbar nav a.link-parceiros .parceiros-texto small {
+        font-size: 11px !important;
+    }
+
+    /* Contador */
+
+    #contador-acessos-menu {
+        width: 100% !important;
+        min-height: 82px !important;
+
+        margin-top: 14px !important;
+
+        padding: 14px 16px !important;
+
+        box-sizing: border-box !important;
+    }
+
+    #contador-acessos-menu .contador-titulo {
+        font-size: 10px !important;
+    }
+
+    #contador-acessos-menu strong {
+        font-size: 23px !important;
+    }
+
+}
+
+</style>
 </head>
 
 
@@ -3687,6 +3789,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </body>
 
 </html>
+
 
 
 
